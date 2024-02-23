@@ -9,10 +9,17 @@
     width: 100%;
     border-collapse: collapse;
   }
+  .table tbody tr{
+    background: gray;
+    border-radius: 20px;
+  
+
+  }
   
   .table tbody tr:hover {
     cursor: pointer;
   }
+  
   
   th {
     padding: 10px 8px;

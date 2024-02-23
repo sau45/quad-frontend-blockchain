@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./table.css";
+import fetchApi from "../../utility/fetchapi";
 
 
 const TableItem = ({ item, index}) => {
@@ -7,12 +8,12 @@ const TableItem = ({ item, index}) => {
   return (
     <tr  >
       <td>{index + 1}</td>
-      <td>{item["Platform"]}</td>
-      <td>{item["Last Traded Price"]}</td>
-      <td>{item["Buy Sell Price"]}</td>
+      <td>{item["name"]}</td>
+      <td>{"₹" + item["last"]}</td>
+      <td>{ "₹" + item["buy"] + " - " + "₹" + item["sell"]}</td>
 
-      <td>{item["Difference"]}</td>
-      <td>{item["Saving"]}</td>
+      <td>{"₹" + (item["sell"] - item["buy"])}</td>
+      <td>{ "₹" + (item["sell"] - item["low"])}</td>
 
     </tr>
   );
@@ -49,6 +50,15 @@ const Table = ({ headers, data }) => {
 };
 
 const AppTable = () => {
+    const [apidata,setApiData]=useState([]);
+
+   useEffect(()=>{
+    const fetchdata= async()=>{
+        const response = await fetchApi();
+        setApiData(response);
+    }
+    fetchdata();
+   },[]);
  
 
   const headers = [
@@ -60,23 +70,23 @@ const AppTable = () => {
     "Saving",
   
   ];
-  const data=[
-    {
-        "Platform":"saurav",
-        "Last Traded Price":"345",
-        "Buy Sell Price":"45",
-        "Difference":"3",
-        "Saving":6
+//   const data=[
+//     {
+//         "Platform":"saurav",
+//         "Last Traded Price":"345",
+//         "Buy Sell Price":"45",
+//         "Difference":"3",
+//         "Saving":6
 
-    }
+//     }
 
 
-  ];
+//   ];
 
   return (
     <div>
      
-      <Table headers={headers} data={data} />
+      <Table headers={headers} data={apidata} />
     </div>
   );
 };
