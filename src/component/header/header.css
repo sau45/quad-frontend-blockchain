@@ -1,0 +1,13 @@
+.timer-wrapper-1 svg{
+    display: none;
+
+}
+.timer-wrapper-1 div:first-child{
+  
+    height: 0px !important;
+    width: 0px !important;
+}
+.timer-wrapper-1 div:nth-child(3){
+    display: unset !important;
+    position: unset !important;
+}

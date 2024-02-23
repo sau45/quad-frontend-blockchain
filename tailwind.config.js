@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors:{
-        "button-custom-color":"#2E3241"
+        "button-custom-color":"#2E3241",
+        "custom-color":"#03fcf4"
       }
     },
   },
