@@ -16,7 +16,7 @@ const BestPriceTrade = () => {
         <div className='pl-8 pr-8'>
 
        
-        <div className='flex items-center justify-center gap-36 flex-wrap pt-8 pb-20'>
+        <div className='flex items-center justify-center gap-20 flex-wrap pt-8 pb-20'>
             <div className='flex flex-col gap-x-16 md:flex-row'>
                 <div className='flex flex-col items-center justify-center'>
 
