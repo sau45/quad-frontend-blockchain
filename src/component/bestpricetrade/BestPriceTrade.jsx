@@ -13,7 +13,7 @@ const BestPriceTrade = () => {
         fetchdata();
     },[])
     return (
-        <div className='pl-8 pr-8'>
+        <div className=''>
 
        
         <div className='flex items-center justify-center gap-20 flex-wrap pt-8 pb-20'>
