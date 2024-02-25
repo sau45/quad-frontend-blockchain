@@ -34,9 +34,9 @@ const BestPriceTrade = () => {
       
 
             <div className='flex flex-col items-center justify-cente whitespace-nowrap gap-4 pb-12 pl-4 pr-4'>
-                <p className='text-[30px] text-gray-400 opacity-15'>Best Price To Trade</p>
+                <p className='text-[30px] text-gray-600 '>Best Price To Trade</p>
                 <p className='text-[70px] text-white'>₹ 26,56,110</p>
-                <p className='text-[16px] text-gray-400 opacity-15'>Average BTC/INR net Price including commision</p>
+                <p className='text-[18px] text-gray-600 '>Average BTC/INR net Price including commision</p>
             </div>
             <div className='flex flex-col gap-x-16  md:flex-row'>
                 <div className='flex flex-col items-center justify-cente'>

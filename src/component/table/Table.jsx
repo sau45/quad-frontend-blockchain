@@ -4,16 +4,22 @@ import fetchApi from "../../utility/fetchapi";
 
 
 const TableItem = ({ item, index}) => {
+  const removedecimal =(decimalvalue)=>{
+    return Math.floor(decimalvalue)
+  }
+  const keeptwovaleafterdecimal =(number)=>{
+    return  parseFloat(number.toFixed(2));
+  }
 
   return (
     <tr style={{ backgroundColor: index % 2 === 0 ? "#CBD5E01A" : "#E2E8F01A" }} >
       <td>{index + 1}</td>
       <td>{item["name"]}</td>
-      <td>{"₹" + item["last"]}</td>
-      <td>{ "₹" + item["buy"] + " - " + "₹" + item["sell"]}</td>
+      <td>{"₹" + removedecimal(item["last"])}</td>
+      <td>{ "₹" + removedecimal(item["buy"])+ " - " + "₹" + removedecimal(item["sell"])}</td>
 
-      <td>{"₹" + (item["sell"] - item["buy"])}</td>
-      <td>{ "₹" + (item["sell"] - - item["low"])}</td>
+      <td className={keeptwovaleafterdecimal(item["buy"] - item["low"]) > 0 ?  "blue" : "red"}>{keeptwovaleafterdecimal(item["buy"] - item["low"])+"%"}</td>
+      <td className={keeptwovaleafterdecimal(item["buy"] - item["low"]) > 0 ?  "blue" : "red"}>{ "₹" + removedecimal(item["sell"] - - item["low"])}</td>
 
     </tr>
   );

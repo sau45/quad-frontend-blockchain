@@ -93,7 +93,7 @@ const Header = () => {
 
 
   return (
-    <div className='flex flex-col md:flex-row md:justify-around items-center gap-4'>
+    <div className='flex flex-col md:flex-row md:justify-between items-center gap-4'>
       <div className='max-w-96 pt-10 pr-10 pl-10'>
 
         <img src="https://hodlinfo.com/static/media/HODLINFO.8f78fc06.png" alt="image" />

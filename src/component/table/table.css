@@ -17,6 +17,13 @@
   
 
   }
+  .blue {
+    color: #03fcf4; 
+  }
+  
+  .red {
+    color: rgb(235, 52, 52);
+  }
   
   .table tbody tr:hover {
     cursor: pointer;
@@ -32,7 +39,7 @@
     padding: 10px 8px;
     color: gray;
     opacity: 0.5;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 600;
     background-color: transparent;
    
