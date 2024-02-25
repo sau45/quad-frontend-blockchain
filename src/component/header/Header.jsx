@@ -104,30 +104,28 @@ const Header = () => {
           value={selectedOption}
           onChange={handleSelectChange}
         >
-
-          <option value="" className='text-center p-12 m-12'>INR </option>
-       
-
+          <option value="" className='text-center p-12 m-12'>INR &#9662;</option>
         </select>
         <select
-    className="flex items-center justify-center appearance-none min-w-12 h-10 bg-button-custom-color font-[700] text-white rounded-xl focus:outline-none focus:bg-gray-500 focus:border-gray-500"
-    value={selectedOption}
-    onChange={handleSelectChange}
-  >
-    <option value="" className="text-center p-4">
-      BTC
-    </option>
-    
-    {btcdata.map((item) => (
-      <option key={item} value={item} className=' text-[20px] text-center'>
-        {item}
-      </option>
-    ))}
-  </select>
+          className="flex items-center justify-center appearance-none min-w-16 h-10 bg-button-custom-color font-[700] text-white rounded-xl focus:outline-none focus:bg-gray-500 focus:border-gray-500"
+          value={selectedOption}
+          onChange={handleSelectChange}
+        >
+          <option value="" className="text-center py-4 px-8">
+            BTC  &#9662;
+          </option>
+
+          {btcdata.map((item) => (
+            <option key={item} value={item} className=' text-[20px] text-center'>
+              {item}
+            </option>
+          ))}
+        </select>
         <p className=' text-center whitespace-nowrap appearance-none py-2 px-3  bg-button-custom-color font-[700]    text-white  rounded-xl focus:outline-none focus:bg-gray-500 focus:border-gray-500 tracking-tighter'><a target='_blank' href="https://wazirx.com/invite/sp7pvbt6?utm_source=finstreet&utm_medium=affiliate&utm_campaign=regnow-btn">BUY BTC</a></p>
       </div>
-      <div className='flex items-center justify-center gap-4 flex-wrap '>
-        <div className="timer-wrapper-1 pr-8 ">
+   
+      <div className='flex items-center justify-center gap-8 flex-wrap flex-col md:flex-row pt-8 md:pt-0  md:gap-0   '>
+        <div className="timer-wrapper-1 pr-10 pb-4 pl-6  md:pb-0 md:pl-0 ">
           <CountdownCircleTimer
             isPlaying
             duration={60}

@@ -50,7 +50,8 @@ const Table = ({ headers, data }) => {
           
              
             />
-          )) :(<div className="text-white text-[40px]">Loading....</div>)}
+          
+          )) :(<div className="text-white text-[40px] flex items-center justify-center relative"><p className="absolute left-96 top-20">Loading....</p></div>)}
       </tbody>
     </table>
   );
